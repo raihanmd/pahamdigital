@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- npx tailwindcss -i ./src/input.css -o ./css/style.css --watch -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pahandigital</title>
     <link rel="stylesheet" href="style.css">
     <!-- TailwindCss -->
-    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.3.4/dist/flowbite.min.css" /> -->
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,13 +26,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                },
+                fontFamily: {
+                    comfortaa: ['Comfortaa', 'cursive'],
+                    fredoka: ['Fredoka', 'sans-serif']
+                }
+            },
+        }
+    </script>
 
-
+    <style>
+        
+    </style>
+    
 <body>
 
     <!-- Green-800 Default green HEX(#166534)-->
     <!-- Navbar -->
-    <div class="w-full bg-gradient-to-br md:flex from-green-800 to-emerald-800 shadow-xl fixed">
+    <div class="w-full bg-gradient-to-br md:flex from-green-800 to-emerald-800 shadow-xl fixed" style="z-index: 1;">
         <div class="flex flex-col md:flex-row">
             <div class="flex items-center justify-between px-4 py-4 md:py-0">
                 <div>
@@ -66,10 +84,10 @@
     <div class="md:pt-44 pt-24 bg-green-800 w-full min-h-screen">
         <div class="container grid grid-cols-1 md:grid-cols-3 mx-auto">
             <div class="lg:text-left lg:col-span-2 md:col-span-3 px-10">
-                <h2 class="lg:text-6xl md:text-5xl text-white text-4xl font-fredoka">Yuk Kenali Dunia Internet Lebih Luas di <span class="text-orange-400">Pahamdigital</span></h2>
+                <h2 class="lg:text-6xl md:text-5xl text-white text-5xl font-fredoka">Yuk Kenali Dunia Internet Lebih Luas di <span class="text-orange-400">Pahamdigital</span></h2>
             </div>
             <div class="lg:text-left lg:col-span-2 lg:row-start-2 md:col-span-3 md:mt-0 mt-2 flex px-10">
-                <p class="xl:-mt-16 lg:text-xl md:text-lg lg:mx-0 text-slate-400 text font-fredoka">Manfaatkan kemajuan teknologi saat ini di dalam kehidupan sehari-hari.</p>
+                <p class="xl:-mt-16 lg:text-xl md:text-lg lg:mx-0 text-slate-400 text-xl font-fredoka">Manfaatkan kemajuan teknologi saat ini di dalam kehidupan sehari-hari.</p>
             </div>
             <div class="md:col-span-1 flex mt-4 h-10">
                 <button onclick="playAudio()" ondblclick="pauseAudio()" class="play xl:-mt-28 lg:ml-10 lg:h-12 lg:w-52 md:mx-0 md:ml-auto mx-auto bg-white w-36 rounded text-green-800 font-semibold font-fred">Dont click me.</button>
@@ -81,12 +99,10 @@
                 <img class="lg:w-[700px] md:w-[330px] mx-auto w-96" src="img/home-4.png" alt="">
             </div>
         </div>
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#166534" fill-opacity="1" d="M0,160L16,144C32,128,64,96,96,112C128,128,160,192,192,224C224,256,256,256,288,234.7C320,213,352,171,384,160C416,149,448,171,480,192C512,213,544,235,576,240C608,245,640,235,672,197.3C704,160,736,96,768,106.7C800,117,832,203,864,208C896,213,928,139,960,90.7C992,43,1024,21,1056,42.7C1088,64,1120,128,1152,138.7C1184,149,1216,107,1248,80C1280,53,1312,43,1344,69.3C1376,96,1408,160,1424,192L1440,224L1440,320L1424,320C1408,320,1376,320,1344,320C1312,320,1280,320,1248,320C1216,320,1184,320,1152,320C1120,320,1088,320,1056,320C1024,320,992,320,960,320C928,320,896,320,864,320C832,320,800,320,768,320C736,320,704,320,672,320C640,320,608,320,576,320C544,320,512,320,480,320C448,320,416,320,384,320C352,320,320,320,288,320C256,320,224,320,192,320C160,320,128,320,96,320C64,320,32,320,16,320L0,320Z"></path></svg> -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,160L16,144C32,128,64,96,96,112C128,128,160,192,192,224C224,256,256,256,288,234.7C320,213,352,171,384,160C416,149,448,171,480,192C512,213,544,235,576,240C608,245,640,235,672,197.3C704,160,736,96,768,106.7C800,117,832,203,864,208C896,213,928,139,960,90.7C992,43,1024,21,1056,42.7C1088,64,1120,128,1152,138.7C1184,149,1216,107,1248,80C1280,53,1312,43,1344,69.3C1376,96,1408,160,1424,192L1440,224L1440,320L1424,320C1408,320,1376,320,1344,320C1312,320,1280,320,1248,320C1216,320,1184,320,1152,320C1120,320,1088,320,1056,320C1024,320,992,320,960,320C928,320,896,320,864,320C832,320,800,320,768,320C736,320,704,320,672,320C640,320,608,320,576,320C544,320,512,320,480,320C448,320,416,320,384,320C352,320,320,320,288,320C256,320,224,320,192,320C160,320,128,320,96,320C64,320,32,320,16,320L0,320Z"></path></svg>
     </div>
     <!-- HomePage end -->
 
-    <!-- Konten -->
     <!-- card -->
     <div class="container grid grid-cols-1 mx-auto w-full mt-10">
         <div class="text-center grid-cols-1 container">
@@ -96,7 +112,7 @@
                 <p class="col-span-3 text-lg mt-4 text-slate-400 lg:mx-72 font-fredoka">Dengan adanya pahamdigital.com akan membuat siswa/siswi dapat berpartisipasi di era dunia modern sekarang ini yang akan menciptakan sebuah pola pikir dan pandangan yang kritis-kreatif.</p>
             </div>
             <div class="flex mt-5 flex-col lg:flex-row md:gap-4 container">
-                <div class="border rounded-lg flex p-8 xl:w-[630px] lg:w-[450px] w-96 mx-auto shadow-md group mb-3 hover:bg-green-100">
+                <div data-aos="fade-right" data-aos-duration="1800" class="border rounded-lg flex p-8 xl:w-[630px] lg:w-[450px] w-96 mx-auto shadow-md group mb-3 hover:bg-green-100">
                     <svg class="flex-shrink-0 row-span-2 mr-3 mt-[6px] text-green-800" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
                         <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
                         <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
@@ -125,7 +141,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="border rounded-lg flex p-8 xl:w-[630px] lg:w-[450px] w-96 mx-auto shadow-md group mb-3 hover:bg-green-100">
+                <div data-aos="fade-left" data-aos-duration="1800" class="border rounded-lg flex p-8 xl:w-[630px] lg:w-[450px] w-96 mx-auto shadow-md group mb-3 hover:bg-green-100">
                     <svg class="flex-shrink-0 row-span-2 mr-3 mt-[6px] text-green-800" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-calendar-plus" viewBox="0 0 16 16">
                         <path d="M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
                         <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
@@ -145,10 +161,10 @@
     <!-- card end -->
     <!-- kegiatan -->
     <div class="flex lg:flex-row flex-col justify-center mt-32 w-full mx-auto container">
-        <div>
+        <div data-aos="fade-right" data-aos-duration="1800" >
             <img class="lg:w-[800px] w-[600px] mx-auto" src="img/feature1.png" alt="">
         </div>
-        <div class="flex flex-col lg:text-left text-center p-5">
+        <div data-aos="fade-left" data-aos-duration="1800" class="flex flex-col lg:text-left text-center p-5">
             <h2 class="text-3xl mb-2 font-fredoka">Kegiatan</h2>
             <p class="lg:mt-0 mt-2 text-lg text-slate-500 font-fredoka">Disini akan lebih banyak praktek sekitar 80% sedangkan 20% untuk pemahaman materi.</p>
             <div class="flex flex-col lg:mt-0 mt-5 lg:p-0 p-5">
@@ -180,16 +196,16 @@
     <!-- kegiatan end -->
     <!-- accordion -->
     <div class="flex flex-col lg:flex-row justify-center container mb-12 p-5 mx-auto">
-        <div class="p-5">
+        <div data-aos="fade-right" data-aos-duration="1800" class="p-5">
             <div class="px-3 lg:text-left text-center">
                 <h2 class="text-2xl font-semibold font-comfortaa">Kamu Harus Tau !!</h2>
                 <p class="font-fredoka mt-2 text-slate-500 text-lg">Kita hidup di jaman yang serba digital, dimana perkembangan teknologi berkembang sangat pesat.</p>
             </div>
-            <div class="mx-auto">
-                <div class="mt-5 mx-auto border rounded-t-lg xl:w-[630px] lg:w-[450px] lg:mx-0 lg:ml-3 md:w-[700px] w-[400px]">
+            <div class="mx-auto justify-center">
+                <div class="mt-5 mx-auto border rounded-t-lg xl:w-[630px] lg:w-[450px] lg:mx-0 lg:ml-3 md:w-[700px]">
                     <div class="btn-ac-1">
                         <div class="ac-1-top font-semibold hover:text-green-800 font-comfortaa border rounded-t-lg cursor-pointer px-5 py-3 flex justify-between">
-                            <h2>Apa itu generasi milenial ?</h2>
+                            <h2 class="text-sm">Apa itu generasi milenial ?</h2>
                             <svg xmlns="http://www.w3.org/2000/svg" class="ac-1-arrow h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
@@ -202,10 +218,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="border w-[400px] mx-auto xl:w-[630px] lg:w-[450px] lg:mx-0 lg:ml-3 md:w-[700px]">
+                <div class="border mx-auto xl:w-[630px] lg:w-[450px] lg:mx-0 lg:ml-3 md:w-[700px]">
                     <div class="btn-ac-2">
                         <div class="ac-2-top font-semibold hover:text-green-800 font-comfortaa border cursor-pointer px-5 py-3 flex justify-between">
-                            <h2>Apa yang dimaksud era digital ?</h2>
+                            <h2 class="text-sm">Apa yang dimaksud era digital ?</h2>
                             <svg xmlns="http://www.w3.org/2000/svg" class="ac-2-arrow h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
@@ -218,10 +234,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="border w-[400px] mx-auto xl:w-[630px] lg:w-[450px] lg:mx-0 lg:ml-3 md:w-[700px]">
+                <div class="border mx-auto xl:w-[630px] lg:w-[450px] lg:mx-0 lg:ml-3 md:w-[700px]">
                     <div class="btn-ac-3">
                         <div class="ac-3-top font-semibold hover:text-green-800 font-comfortaa border cursor-pointer px-5 py-3 flex justify-between">
-                            <h2>Generasi muda harus paham literasi digital !!</h2>
+                            <h2 class="text-sm">Generasi muda harus paham literasi digital !!</h2>
                             <svg xmlns="http://www.w3.org/2000/svg" class="ac-3-arrow h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
@@ -236,14 +252,14 @@
                 </div>
             </div>
         </div>
-        <div class="flex items-center justify-center mx-auto">
+        <div data-aos="fade-left" data-aos-duration="1800"  class="flex items-center justify-center mx-auto">
             <img src="img/feature2.png" class="mt-5 md:w-[800px] w-[600px]" alt="">
         </div>
     </div>
     <!-- accordion end -->
     <!-- parallax -->
     <div class="w-full bg-right-top lg:bg-top bg-fixed py-24" style="background-image: url(img/jason-goodman-6awfTPLGaCE-unsplash.jpg); box-shadow: inset 0px 0px 400px 110px rgba(0, 0, 0, .7);">
-        <div class="flex flex-col text-center my-auto mx-auto">
+        <div data-aos="fade-down" data-aos-duration="1800" class="flex flex-col text-center my-auto mx-auto">
             <h2 class="text-3xl text-white font-bold" style="font-family: 'Fredoka', sans-serif;">Gabung Banh!!</h2>
             <p class="text text-white" style="font-family: 'Fredoka', sans-serif;">Lorem ipsum dolor sit amet.</p>
             <button class="bg-green-800 mx-auto mt-3 rounded-lg py-3 text-white w-40" style="font-family: 'Fredoka', sans-serif;">lorem.</button>
@@ -251,28 +267,44 @@
     </div>
     <!-- parallax end -->
     <!-- orang -->
-    <div class="container grid grid-cols-1 mx-auto w-full mt-10">
-        <div class="text-center grid-cols-1 container">
-            <div class="text-center px-8">
-                <h2 class="col-span-3 text-3xl mx-auto font-semibold text-slate-900" style="font-family: 'Montserrat', sans-serif;">Apa yang orang lain katakan ?</h2>
-                <hr class="mt-4 border-t-4 rounded-lg border-green-800 md:mx-[300px] lg:mx-[400px] xl:mx-[540px]">
-                <p class="col-span-3 text-lg mt-4 text-slate-400 lg:mx-72 font-fredoka">Tanggapan orang lain terhadap adanya pahamdigital.com</p>
-            </div>
-            <div class="flex mt-5 flex-col lg:flex-row md:gap-4 container">
-                <div class="border rounded-lg flex p-8 xl:w-[630px] lg:w-[450px] w-96 mx-auto shadow-md group mb-3 hover:bg-green-100">
-                    <svg class="flex-shrink-0 row-span-2 mr-3 mt-[6px] text-green-800" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
-                        <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
-                        <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                    </svg>
-                    <div class="flex-grow text-left">
-                        <h2 class="text-xl font-semibold text-slate-800 group-hover:text-green-800" style="font-family: 'Hubballi', cursive;">Konten kreator</h2>
-                        <hr class="border-t border-slate-500">
-                        <p class="mt-2 text-sm text-slate-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, deserunt.</p>
-                        <p class="mt-2">
-                            <a href="#" class="text-sm text-blue-500">Read More ></a>
-                        </p>
-                    </div>
+    <div class="container mx-auto w-full mt-32">
+        <div class="text-center px-8">
+            <h2 class="col-span-3 text-3xl mx-auto font-semibold text-slate-900" style="font-family: 'Montserrat', sans-serif;">Apa yang orang lain katakan?</h2>
+            <hr class="mt-4 border-t-4 rounded-lg border-green-800 md:mx-[300px] lg:mx-[400px] xl:mx-[540px]">
+            <p class="col-span-3 text-lg mt-4 text-slate-400 lg:mx-72 font-fredoka">Tanggapan orang lain terhadap adanya pahamdigital.com</p>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1800"  class="container grid mt-5 lg:grid-cols-2 lg:grid-rows-4 grid-cols-1 mx-auto">
+            <!-- cust 1 -->
+            <div class="flex items-center mx-auto px-5 py-3 border-b lg:border-none lg:translate-x-40">
+                <div class="rounded bg-cover w-32 h-20 bg-center bg-[url('img/customer1.jpg')]"></div>
+                <div class="ml-5 text-left font-comfortaa">
+                    <h2 class="text-lg text-slate-700"><i>- Rosaline</i></h2>
+                    <p class="text-sm text-slate-500">"Lorem ipsum dolor sit amet consectetur adipisicing elit?"</p>
                 </div>
+            </div>
+            <!-- cust 2 -->
+            <div class="flex items-center mx-auto px-5 py-3 border-b lg:border-none lg:col-start-2 lg:row-start-2 lg:-translate-x-40">
+                <div class="mr-5 font-comfortaa text-right">
+                    <h2 class="text-lg text-slate-700"><i>Edgar -</i></h2>
+                    <p class="text-sm text-slate-500">"Lorem ipsum dolor sit amet consectetur adipisicing elit?"</p>
+                </div>
+                <div class="rounded bg-cover bg-center w-32 h-20 bg-[url('img/customer2.jpg')]"></div>
+            </div>
+            <!-- cust 3 -->
+            <div class="flex items-center mx-auto px-5 py-3 border-b lg:border-none lg:col-start-1 lg:row-start-3 lg:translate-x-40">
+                <div class="rounded bg-cover w-32 h-20 bg-center bg-[url('img/customer3.jpg')]"></div>
+                <div class="ml-5 text-left font-comfortaa">
+                    <h2 class="text-lg text-slate-700"><i>- Rose</i></h2>
+                    <p class="text-sm text-slate-500">"Lorem ipsum dolor sit amet consectetur adipisicing elit?"</p>
+                </div>
+            </div>
+            <!-- cust 4 -->
+            <div class="flex items-center mx-auto px-5 py-3 lg:col-start-2 lg:row-start-4 lg:-translate-x-40">
+                <div class="mr-5 font-comfortaa text-right">
+                    <h2 class="text-lg text-slate-700"><i>Javier -</i></h2>
+                    <p class="text-sm text-slate-500">"Lorem ipsum dolor sit amet consectetur adipisicing elit?"</p>
+                </div>
+                <div class="rounded bg-cover bg-right w-32 h-20 bg-[url('img/customer4.jpg')]"></div>
             </div>
         </div>
     </div>
@@ -295,6 +327,11 @@
     <!-- team end -->
     <!-- Konten end -->
 
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <script>
         var x = document.getElementById("myAudio"); 
