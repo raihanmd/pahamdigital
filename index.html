@@ -1,632 +1,714 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pahandigital</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- TailwindCss -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
     <!-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.3.4/dist/flowbite.min.css" /> -->
     <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://pahamdigital.com/images/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-</head>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                },
-                fontFamily: {
-                    comfortaa: ['Comfortaa', 'cursive'],
-                    fredoka: ['Fredoka', 'sans-serif']
-                }
-            },
-        }
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet" />
+    <link rel="icon" href="https://pahamdigital.com/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet" />
+  </head>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {},
+        fontFamily: {
+          comfortaa: ["Comfortaa", "cursive"],
+          fredoka: ["Fredoka", "sans-serif"],
+        },
+      },
+    };
+  </script>
 
-    <style>
-        
-    </style>
-    
-<body>
+  <style></style>
 
+  <body>
     <!-- Green-800 Default green HEX(#166534)-->
     <!-- Navbar -->
-    <div class="w-full bg-gradient-to-br md:flex from-green-800 to-emerald-800 shadow-xl fixed" style="z-index: 2;">
-        <div class="flex flex-col md:flex-row">
-            <div class="flex items-center justify-between px-4 py-4 md:py-0">
-                <div>
-                    <a href="#" class="uppercase font-semibold text-white">paham<span class="text-orange-400">digital</span></a>
-                </div>
-                <div class="menu-toggle">
-                    <button class="mobile-menu-button focus:outline-none text-white block md:hidden">
-                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
+    <div class="w-full bg-gradient-to-br md:flex from-green-800 to-emerald-800 shadow-xl fixed" style="z-index: 2">
+      <div class="flex flex-col md:flex-row">
+        <div class="flex items-center justify-between px-4 py-4 md:py-0">
+          <div>
+            <a href="#" class="uppercase font-semibold text-white">paham<span class="text-orange-400">digital</span></a>
+          </div>
+          <div class="menu-toggle">
+            <button class="mobile-menu-button focus:outline-none text-white block md:hidden">
+              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
         </div>
+      </div>
 
-        <div class="mobile-menu hidden md:flex flex-col md:flex-row items-center justify-end w-full border-t md:border-0 border-white">
-            <div class="flex flex-col md:flex-row">
-                <a href="#" class="hover:bg-white md:hover:bg-transparent hover:text-green-800 block px-4 py-2 md:py-5 hover:font-semibold md:border-0 md:hover:font-normal text-slate-300 md:hover:text-white border-b border-slate-300">Home</a>
-                <a href="#" class="hover:bg-white md:hover:bg-transparent hover:text-green-800 block px-4 py-2 md:py-5 hover:font-semibold md:border-0 md:hover:font-normal text-slate-300 md:hover:text-white border-b border-slate-300">Comingsoon</a>
-                <a href="#" class="hover:bg-white md:hover:bg-transparent hover:text-green-800 block px-4 py-2 md:py-5 hover:font-semibold md:border-0 md:hover:font-normal text-slate-300 md:hover:text-white border-b border-slate-300">Comingsoon</a>
-                <a href="#" class="hover:bg-white md:hover:bg-transparent hover:text-green-800 block px-4 py-2 md:py-5 hover:font-semibold md:border-0 md:hover:font-normal text-slate-300 md:hover:text-white border-b border-slate-300">Comingsoon</a>
-            </div>
-            <div class="flex flex-col md:flex-row justify-center md:mr-12 md:my-3 my-4">
-                <button class="bg-white hover:bg-slate-300 rounded-full h-8 flex items-center md:mx-0 mx-auto">
-                    <a href="#" class="font-semibold block px-4 py-2 md:py-5 text-green-800 ">Sign up</a>
-                </button>
-            </div>
+      <div class="mobile-menu hidden md:flex flex-col md:flex-row items-center justify-end w-full border-t md:border-0 border-white">
+        <div class="flex flex-col md:flex-row">
+          <a href="#" class="hover:bg-white md:hover:bg-transparent hover:text-green-800 block px-4 py-2 md:py-5 hover:font-semibold md:border-0 md:hover:font-normal text-slate-300 md:hover:text-white border-b border-slate-300">Home</a>
+          <a href="#" class="hover:bg-white md:hover:bg-transparent hover:text-green-800 block px-4 py-2 md:py-5 hover:font-semibold md:border-0 md:hover:font-normal text-slate-300 md:hover:text-white border-b border-slate-300"
+            >Comingsoon</a
+          >
+          <a href="#" class="hover:bg-white md:hover:bg-transparent hover:text-green-800 block px-4 py-2 md:py-5 hover:font-semibold md:border-0 md:hover:font-normal text-slate-300 md:hover:text-white border-b border-slate-300"
+            >Comingsoon</a
+          >
+          <a href="#" class="hover:bg-white md:hover:bg-transparent hover:text-green-800 block px-4 py-2 md:py-5 hover:font-semibold md:border-0 md:hover:font-normal text-slate-300 md:hover:text-white border-b border-slate-300"
+            >Comingsoon</a
+          >
         </div>
+        <div class="flex flex-col md:flex-row justify-center md:mr-12 md:my-3 my-4">
+          <button class="bg-white hover:bg-slate-300 rounded-full h-8 flex items-center md:mx-0 mx-auto">
+            <a href="#" class="font-semibold block px-4 py-2 md:py-5 text-green-800">Sign up</a>
+          </button>
+        </div>
+      </div>
     </div>
     <!-- NavbarEnd -->
 
     <!-- HomePage -->
     <div class="md:pt-44 pt-24 bg-green-800 w-full min-h-screen">
-        <div class="container grid grid-cols-1 md:grid-cols-3 mx-auto">
-            <div class="lg:text-left lg:col-span-2 md:col-span-3 px-10">
-                <h2 class="lg:text-6xl md:text-5xl text-white text-5xl font-fredoka">Yuk Kenali Dunia Internet Lebih Luas di <span class="text-orange-400">Pahamdigital</span></h2>
-            </div>
-            <div class="lg:text-left lg:col-span-2 lg:row-start-2 md:col-span-3 md:mt-0 mt-2 flex px-10">
-                <p class="xl:-mt-16 lg:text-xl md:text-lg lg:mx-0 text-slate-400 text-xl font-fredoka">Manfaatkan kemajuan teknologi saat ini di dalam kehidupan sehari-hari.</p>
-            </div>
-            <div class="md:col-span-1 flex mt-4 h-10">
-                <button onclick="playAudio()" ondblclick="pauseAudio()" class="hover:-translate-y-2 hover:shadow-2xl transition duration-500 play xl:-mt-28 lg:ml-10 lg:h-12 lg:w-52 md:mx-0 md:ml-auto mx-auto bg-white w-36 rounded text-green-800 font-semibold font-fred">Dont click me.</button>
-                <audio id="myAudio" class="hidden" controls>
-                    <source src="audio/WhatsApp Video 2022-03-09 at 14.34.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-            <div class="lg:row-span-3 lg:col-start-3 lg:row-start-1 md:col-span-2 flex mt-4">
-                <img class="lg:w-[700px] md:w-[330px] mx-auto w-96" src="img/home-4.png" alt="">
-            </div>
+      <div class="container grid grid-cols-1 md:grid-cols-3 mx-auto">
+        <div class="lg:text-left lg:col-span-2 md:col-span-3 px-10">
+          <h2 class="lg:text-6xl md:text-5xl text-white text-5xl font-fredoka">Yuk Kenali Dunia Internet Lebih Luas di <span class="text-orange-400">Pahamdigital</span></h2>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,160L16,144C32,128,64,96,96,112C128,128,160,192,192,224C224,256,256,256,288,234.7C320,213,352,171,384,160C416,149,448,171,480,192C512,213,544,235,576,240C608,245,640,235,672,197.3C704,160,736,96,768,106.7C800,117,832,203,864,208C896,213,928,139,960,90.7C992,43,1024,21,1056,42.7C1088,64,1120,128,1152,138.7C1184,149,1216,107,1248,80C1280,53,1312,43,1344,69.3C1376,96,1408,160,1424,192L1440,224L1440,320L1424,320C1408,320,1376,320,1344,320C1312,320,1280,320,1248,320C1216,320,1184,320,1152,320C1120,320,1088,320,1056,320C1024,320,992,320,960,320C928,320,896,320,864,320C832,320,800,320,768,320C736,320,704,320,672,320C640,320,608,320,576,320C544,320,512,320,480,320C448,320,416,320,384,320C352,320,320,320,288,320C256,320,224,320,192,320C160,320,128,320,96,320C64,320,32,320,16,320L0,320Z"></path></svg>
+        <div class="lg:text-left lg:col-span-2 lg:row-start-2 md:col-span-3 md:mt-0 mt-2 flex px-10">
+          <p class="xl:-mt-16 lg:text-xl md:text-lg lg:mx-0 text-slate-400 text-xl font-fredoka">Manfaatkan kemajuan teknologi saat ini di dalam kehidupan sehari-hari.</p>
+        </div>
+        <div class="md:col-span-1 flex mt-4 h-10">
+          <button
+            onclick="playAudio()"
+            ondblclick="pauseAudio()"
+            class="hover:-translate-y-2 hover:shadow-2xl transition duration-500 play xl:-mt-28 lg:ml-10 lg:h-12 lg:w-52 md:mx-0 md:ml-auto mx-auto bg-white w-36 rounded text-green-800 font-semibold font-fred"
+          >
+            Dont click me.
+          </button>
+          <audio id="myAudio" class="hidden" controls>
+            <source src="audio/WhatsApp Video 2022-03-09 at 14.34.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+        <div class="lg:row-span-3 lg:col-start-3 lg:row-start-1 md:col-span-2 flex mt-4">
+          <img class="lg:w-[700px] md:w-[330px] mx-auto w-96" src="img/home-4.png" alt="" />
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,160L16,144C32,128,64,96,96,112C128,128,160,192,192,224C224,256,256,256,288,234.7C320,213,352,171,384,160C416,149,448,171,480,192C512,213,544,235,576,240C608,245,640,235,672,197.3C704,160,736,96,768,106.7C800,117,832,203,864,208C896,213,928,139,960,90.7C992,43,1024,21,1056,42.7C1088,64,1120,128,1152,138.7C1184,149,1216,107,1248,80C1280,53,1312,43,1344,69.3C1376,96,1408,160,1424,192L1440,224L1440,320L1424,320C1408,320,1376,320,1344,320C1312,320,1280,320,1248,320C1216,320,1184,320,1152,320C1120,320,1088,320,1056,320C1024,320,992,320,960,320C928,320,896,320,864,320C832,320,800,320,768,320C736,320,704,320,672,320C640,320,608,320,576,320C544,320,512,320,480,320C448,320,416,320,384,320C352,320,320,320,288,320C256,320,224,320,192,320C160,320,128,320,96,320C64,320,32,320,16,320L0,320Z"
+        ></path>
+      </svg>
     </div>
     <!-- HomePage end -->
 
     <!-- card -->
     <div class="overflow-hidden container grid grid-cols-1 mx-auto w-full mt-10">
-        <div class="text-center grid-cols-1 container">
-            <div class="text-center px-8">
-                <h2 class="col-span-3 text-3xl mx-auto font-semibold text-slate-900" style="font-family: 'Montserrat', sans-serif;">Pahamdigital.com</h2>
-                <hr class="mt-4 border-t-4 rounded-lg border-green-800 md:mx-[300px] lg:mx-[400px] xl:mx-[540px]">
-                <p class="col-span-3 text-lg mt-4 text-slate-400 lg:mx-72 font-fredoka">Dengan adanya pahamdigital.com akan membuat siswa/siswi dapat berpartisipasi di era dunia modern sekarang ini yang akan menciptakan sebuah pola pikir dan pandangan yang kritis-kreatif.</p>
-            </div>
-            <div class="flex mt-5 flex-col mx-auto p-2 lg:flex-row md:gap-4 container">
-                <div data-aos="fade-right" data-aos-duration="1800" class="border rounded-lg flex p-8 xl:w-[630px] lg:w-[450px] w-80 mx-auto shadow-md group mb-3 hover:bg-green-50">
-                    <svg class="flex-shrink-0 row-span-2 mr-3 mt-[6px] text-green-800" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
-                        <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
-                        <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                    </svg>
-                    <div class="flex-grow text-left">
-                        <h2 class="text-xl font-semibold text-slate-800 group-hover:text-green-800" style="font-family: 'Hubballi', cursive;">Konten kreator</h2>
-                        <hr class="border-t border-slate-500">
-                        <p class="mt-2 text-sm text-slate-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, deserunt.</p>
-                        <p class="mt-2">
-                            <a href="#" class="text-sm text-blue-500">Read More ></a>
-                        </p>
-                    </div>
-                </div>
-                <div class="border rounded-lg flex p-8 xl:w-[630px] lg:w-[450px] w-80 mx-auto shadow-md group mb-3 hover:bg-green-50">
-                    <svg class="flex-shrink-0 row-span-2 mr-3 mt-[6px] text-green-800" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
-                        <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
-                        <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
-                    </svg>
-                    <!-- class="flex-shrink-0 row-span-2 mr-3 mt-[6px] text-green-800" -->
-                    <div class="flex-grow text-left">
-                        <h2 class="text-xl font-semibold text-slate-800 group-hover:text-green-800" style="font-family: 'Hubballi', cursive;">Usaha Digital</h2>
-                        <hr class="border-t border-slate-500">
-                        <p class="mt-2 text-sm text-slate-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, deserunt.</p>
-                        <p class="mt-2">
-                            <a href="#" class="text-sm text-blue-500">Read More ></a>
-                        </p>
-                    </div>
-                </div>
-                <div data-aos="fade-left" data-aos-duration="1800" class="border rounded-lg flex p-8 xl:w-[630px] lg:w-[450px] w-80 mx-auto shadow-md group mb-3 hover:bg-green-50">
-                    <svg class="flex-shrink-0 row-span-2 mr-3 mt-[6px] text-green-800" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-calendar-plus" viewBox="0 0 16 16">
-                        <path d="M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
-                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-                    </svg>
-                    <div class="flex-grow text-left">
-                        <h2 class="text-xl font-semibold text-slate-800 group-hover:text-green-800" style="font-family: 'Hubballi', cursive;">Comingsoon</h2>
-                        <hr class="border-t border-slate-500">
-                        <p class="mt-2 text-sm text-slate-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, deserunt.</p>
-                        <p class="mt-2">
-                            <a href="#" class="text-sm text-blue-500">Read More ></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
+      <div class="text-center grid-cols-1 container">
+        <div class="text-center px-8">
+          <h2 class="col-span-3 text-3xl mx-auto font-semibold text-slate-900" style="font-family: 'Montserrat', sans-serif">Pahamdigital.com</h2>
+          <hr class="mt-4 border-t-4 rounded-lg border-green-800 md:mx-[300px] lg:mx-[400px] xl:mx-[540px]" />
+          <p class="col-span-3 text-lg mt-4 text-slate-400 lg:mx-72 font-fredoka">
+            Dengan adanya pahamdigital.com akan membuat siswa/siswi dapat berpartisipasi di era dunia modern sekarang ini yang akan menciptakan sebuah pola pikir dan pandangan yang kritis-kreatif.
+          </p>
         </div>
+        <div class="flex mt-5 flex-col mx-auto p-2 lg:flex-row md:gap-4 container">
+          <div data-aos="fade-right" data-aos-duration="1800" class="border rounded-lg flex p-8 xl:w-[630px] lg:w-[450px] w-80 mx-auto shadow-md group mb-3 hover:bg-green-50">
+            <svg class="flex-shrink-0 row-span-2 mr-3 mt-[6px] text-green-800" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+              <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+              <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+            </svg>
+            <div class="flex-grow text-left">
+              <h2 class="text-xl font-semibold text-slate-800 group-hover:text-green-800" style="font-family: 'Hubballi', cursive">Konten kreator</h2>
+              <hr class="border-t border-slate-500" />
+              <p class="mt-2 text-sm text-slate-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, deserunt.</p>
+              <p class="mt-2">
+                <a href="#" class="text-sm text-blue-500">Read More ></a>
+              </p>
+            </div>
+          </div>
+          <div class="border rounded-lg flex p-8 xl:w-[630px] lg:w-[450px] w-80 mx-auto shadow-md group mb-3 hover:bg-green-50">
+            <svg class="flex-shrink-0 row-span-2 mr-3 mt-[6px] text-green-800" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
+              <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+              <path
+                d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"
+              />
+            </svg>
+            <!-- class="flex-shrink-0 row-span-2 mr-3 mt-[6px] text-green-800" -->
+            <div class="flex-grow text-left">
+              <h2 class="text-xl font-semibold text-slate-800 group-hover:text-green-800" style="font-family: 'Hubballi', cursive">Usaha Digital</h2>
+              <hr class="border-t border-slate-500" />
+              <p class="mt-2 text-sm text-slate-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, deserunt.</p>
+              <p class="mt-2">
+                <a href="#" class="text-sm text-blue-500">Read More ></a>
+              </p>
+            </div>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="1800" class="border rounded-lg flex p-8 xl:w-[630px] lg:w-[450px] w-80 mx-auto shadow-md group mb-3 hover:bg-green-50">
+            <svg class="flex-shrink-0 row-span-2 mr-3 mt-[6px] text-green-800" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-calendar-plus" viewBox="0 0 16 16">
+              <path d="M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z" />
+              <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+            </svg>
+            <div class="flex-grow text-left">
+              <h2 class="text-xl font-semibold text-slate-800 group-hover:text-green-800" style="font-family: 'Hubballi', cursive">Comingsoon</h2>
+              <hr class="border-t border-slate-500" />
+              <p class="mt-2 text-sm text-slate-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, deserunt.</p>
+              <p class="mt-2">
+                <a href="#" class="text-sm text-blue-500">Read More ></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- card end -->
     <!-- kegiatan -->
     <div class="overflow-hidden flex lg:flex-row flex-col justify-center mt-32 w-full mx-auto container">
-        <div data-aos="fade-right" data-aos-duration="1800" >
-            <img class="lg:w-[800px] w-[600px] mx-auto" src="img/feature1.png" alt="">
+      <div data-aos="fade-right" data-aos-duration="1800">
+        <img class="lg:w-[800px] w-[600px] mx-auto" src="img/feature1.png" alt="" />
+      </div>
+      <div data-aos="fade-left" data-aos-duration="1800" class="flex flex-col lg:text-left text-center p-5">
+        <h2 class="text-3xl mb-2 font-fredoka">Kegiatan</h2>
+        <p class="lg:mt-0 mt-2 text-lg text-slate-500 font-fredoka">Disini akan lebih banyak praktek sekitar 80% sedangkan 20% untuk pemahaman materi.</p>
+        <div class="flex flex-col lg:mt-0 mt-5 lg:p-0 p-5">
+          <div class="hover:-translate-y-1 hover:shadow-2xl transition duration-500 border-b border-green-800 flex items-center px-3 h-14 hover:rounded-xl hover:bg-green-50">
+            <svg class="text-green-800" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
+              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
+            </svg>
+            <h2 class="text-lg ml-3 text-slate-700 font-fredoka">Materi Pahamdigital.com</h2>
+          </div>
+          <div class="hover:-translate-y-1 hover:shadow-2xl transition duration-500 border-b border-green-800 flex items-center px-3 h-14 hover:rounded-xl hover:bg-green-50">
+            <svg class="text-green-800" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
+              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
+            </svg>
+            <h2 class="text-lg ml-3 text-slate-700 font-fredoka">Produk Digital.</h2>
+          </div>
+          <div class="hover:-translate-y-1 hover:shadow-2xl transition duration-500 border-b border-green-800 flex items-center px-3 h-14 hover:rounded-xl hover:bg-green-50">
+            <svg class="text-green-800" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
+              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
+            </svg>
+            <h2 class="text-lg ml-3 text-slate-700 font-fredoka">Cari Cuan Di Internet.</h2>
+          </div>
+          <button class="hover:-translate-y-2 hover:shadow-2xl transition duration-500 mr-auto mt-3 bg-green-800 px-7 py-3 text-white rounded-md font-fredoka">Learn more</button>
         </div>
-        <div data-aos="fade-left" data-aos-duration="1800" class="flex flex-col lg:text-left text-center p-5">
-            <h2 class="text-3xl mb-2 font-fredoka">Kegiatan</h2>
-            <p class="lg:mt-0 mt-2 text-lg text-slate-500 font-fredoka">Disini akan lebih banyak praktek sekitar 80% sedangkan 20% untuk pemahaman materi.</p>
-            <div class="flex flex-col lg:mt-0 mt-5 lg:p-0 p-5">
-                <div class="hover:-translate-y-1 hover:shadow-2xl transition duration-500 border-b border-green-800 flex items-center px-3 h-14 hover:rounded-xl hover:bg-green-50">
-                    <svg class="text-green-800" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
-                        <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
-                        <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
-                    </svg>
-                    <h2 class="text-lg ml-3 text-slate-700 font-fredoka">Materi Pahamdigital.com</h2>
-                </div>
-                <div class="hover:-translate-y-1 hover:shadow-2xl transition duration-500 border-b border-green-800 flex items-center px-3 h-14 hover:rounded-xl hover:bg-green-50">
-                    <svg class="text-green-800" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
-                        <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
-                        <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
-                    </svg>
-                    <h2 class="text-lg ml-3 text-slate-700 font-fredoka">Produk Digital.</h2>
-                </div>
-                <div class="hover:-translate-y-1 hover:shadow-2xl transition duration-500 border-b border-green-800 flex items-center px-3 h-14 hover:rounded-xl hover:bg-green-50">
-                    <svg class="text-green-800" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
-                        <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
-                        <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
-                    </svg>
-                    <h2 class="text-lg ml-3 text-slate-700 font-fredoka">Cari Cuan Di Internet.</h2>
-                </div>
-                <button class="hover:-translate-y-2 hover:shadow-2xl transition duration-500 mr-auto mt-3 bg-green-800 px-7 py-3 text-white rounded-md font-fredoka">Learn more</button>
-            </div>
-        </div>
+      </div>
     </div>
     <!-- kegiatan end -->
     <!-- accordion -->
     <div class="overflow-hidden flex flex-col lg:flex-row justify-center container mb-12 p-5 mx-auto">
-        <div data-aos="fade-right" data-aos-duration="1800" class="p-5">
-            <div class="px-3 lg:text-left text-center">
-                <h2 class="text-2xl font-semibold font-comfortaa">Kamu Harus Tau !!</h2>
-                <p class="font-fredoka mt-2 text-slate-500 text-lg">Kita hidup di jaman yang serba digital, dimana perkembangan teknologi berkembang sangat pesat.</p>
-            </div>
-            <div class="mx-auto justify-center">
-                <div class="mt-5 mx-auto border rounded-t-lg xl:w-[630px] lg:w-[450px] lg:mx-0 lg:ml-3 md:w-[700px]">
-                    <div class="btn-ac-1">
-                        <div class="ac-1-top font-semibold hover:text-green-800 font-comfortaa border rounded-t-lg cursor-pointer px-5 py-3 flex justify-between">
-                            <h2 class="text-sm">Apa itu generasi milenial ?</h2>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="ac-1-arrow h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="ac-1 hidden">
-                        <div class="border px-5 py-3">
-                            <p class="font-fredoka mb-4">Generasi milenial atau generasi y yaitu orang yang terlahir pada awal tahun 1980-an sampai awal tahun 2000-an. Generasi milenial yang tumbuh ditengah perkembangan digital saat ini menempati lebih dari setengah pada jumlah tenaga kerja.</p>
-                            <a class="text-blue-500" href="#!">Read more ></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="border mx-auto xl:w-[630px] lg:w-[450px] lg:mx-0 lg:ml-3 md:w-[700px]">
-                    <div class="btn-ac-2">
-                        <div class="ac-2-top font-semibold hover:text-green-800 font-comfortaa border cursor-pointer px-5 py-3 flex justify-between">
-                            <h2 class="text-sm">Apa yang dimaksud era digital ?</h2>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="ac-2-arrow h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="ac-2 hidden">
-                        <div class="border px-5 py-3">
-                            <p class="font-fredoka mb-4">Era digital adalah suatu masa yang sudah mengalami perkembangan dalam segala aspek kehidupan dari yang tadinya analog menjadi serba digital atau menggunakan teknologi. Di era digital, kita lebih mudah dalam mendapatkan berbagai informasi melalui internet dengan dukungan gawai yang memadai.</p>
-                            <a class="text-blue-500" href="#!">Read more ></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="border mx-auto xl:w-[630px] lg:w-[450px] lg:mx-0 lg:ml-3 md:w-[700px]">
-                    <div class="btn-ac-3">
-                        <div class="ac-3-top font-semibold hover:text-green-800 font-comfortaa border cursor-pointer px-5 py-3 flex justify-between">
-                            <h2 class="text-sm">Generasi muda harus paham literasi digital !!</h2>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="ac-3-arrow h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="ac-3 hidden">
-                        <div class="border px-5 py-3">
-                            <p class="font-fredoka mb-4">Kementerian Komunikasi dan Informatika menilai memberikan pemahaman literasi digital sangat penting. Hal ini guna menahan generasi muda melakukan perundungan siber. “Pemahaman literasi digital sangatlah penting untuk menekan angka perundungan siber dan mendorong generasi muda untuk nyaman berkreasi di dunia digital.</p>
-                            <a class="text-blue-500" href="#!">Read more ></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div data-aos="fade-right" data-aos-duration="1800" class="p-5">
+        <div class="px-3 lg:text-left text-center">
+          <h2 class="text-2xl font-semibold font-comfortaa">Kamu Harus Tau !!</h2>
+          <p class="font-fredoka mt-2 text-slate-500 text-lg">Kita hidup di jaman yang serba digital, dimana perkembangan teknologi berkembang sangat pesat.</p>
         </div>
-        <div data-aos="fade-left" data-aos-duration="1800"  class="flex items-center justify-center mx-auto">
-            <img src="img/feature2.png" class="mt-5 md:w-[800px] w-[600px]" alt="">
+        <div class="mx-auto justify-center">
+          <div class="mt-5 mx-auto border rounded-t-lg xl:w-[630px] lg:w-[450px] lg:mx-0 lg:ml-3 md:w-[700px]">
+            <div class="btn-ac-1">
+              <div class="ac-1-top font-semibold hover:text-green-800 font-comfortaa border rounded-t-lg cursor-pointer px-5 py-3 flex justify-between">
+                <h2 class="text-sm">Apa itu generasi milenial ?</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ac-1-arrow h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+            <div class="ac-1 hidden">
+              <div class="border px-5 py-3">
+                <p class="font-fredoka mb-4">
+                  Generasi milenial atau generasi y yaitu orang yang terlahir pada awal tahun 1980-an sampai awal tahun 2000-an. Generasi milenial yang tumbuh ditengah perkembangan digital saat ini menempati lebih dari setengah pada jumlah
+                  tenaga kerja.
+                </p>
+                <a class="text-blue-500" href="#!">Read more ></a>
+              </div>
+            </div>
+          </div>
+          <div class="border mx-auto xl:w-[630px] lg:w-[450px] lg:mx-0 lg:ml-3 md:w-[700px]">
+            <div class="btn-ac-2">
+              <div class="ac-2-top font-semibold hover:text-green-800 font-comfortaa border cursor-pointer px-5 py-3 flex justify-between">
+                <h2 class="text-sm">Apa yang dimaksud era digital ?</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ac-2-arrow h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+            <div class="ac-2 hidden">
+              <div class="border px-5 py-3">
+                <p class="font-fredoka mb-4">
+                  Era digital adalah suatu masa yang sudah mengalami perkembangan dalam segala aspek kehidupan dari yang tadinya analog menjadi serba digital atau menggunakan teknologi. Di era digital, kita lebih mudah dalam mendapatkan
+                  berbagai informasi melalui internet dengan dukungan gawai yang memadai.
+                </p>
+                <a class="text-blue-500" href="#!">Read more ></a>
+              </div>
+            </div>
+          </div>
+          <div class="border mx-auto xl:w-[630px] lg:w-[450px] lg:mx-0 lg:ml-3 md:w-[700px]">
+            <div class="btn-ac-3">
+              <div class="ac-3-top font-semibold hover:text-green-800 font-comfortaa border cursor-pointer px-5 py-3 flex justify-between">
+                <h2 class="text-sm">Generasi muda harus paham literasi digital !!</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ac-3-arrow h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+            <div class="ac-3 hidden">
+              <div class="border px-5 py-3">
+                <p class="font-fredoka mb-4">
+                  Kementerian Komunikasi dan Informatika menilai memberikan pemahaman literasi digital sangat penting. Hal ini guna menahan generasi muda melakukan perundungan siber. “Pemahaman literasi digital sangatlah penting untuk
+                  menekan angka perundungan siber dan mendorong generasi muda untuk nyaman berkreasi di dunia digital.
+                </p>
+                <a class="text-blue-500" href="#!">Read more ></a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div data-aos="fade-left" data-aos-duration="1800" class="flex items-center justify-center mx-auto">
+        <img src="img/feature2.png" class="mt-5 md:w-[800px] w-[600px]" alt="" />
+      </div>
     </div>
     <!-- accordion end -->
     <!-- parallax -->
-    <div class="overflow-hidden w-full bg-right-top lg:bg-top bg-fixed py-24" style="background-image: url(img/jason-goodman-6awfTPLGaCE-unsplash.jpg); box-shadow: inset 0px 0px 400px 110px rgba(0, 0, 0, .7);">
-        <div data-aos="fade-down" data-aos-duration="1800" class="flex flex-col text-center my-auto mx-auto">
-            <h2 class="text-3xl text-white font-bold" style="font-family: 'Fredoka', sans-serif;">Gabung Banh!!</h2>
-            <p class="text text-white" style="font-family: 'Fredoka', sans-serif;">Lorem ipsum dolor sit amet.</p>
-            <button class="hover:-translate-y-2 hover:shadow-2xl transition duration-500 hover:bg-green-600 bg-green-800 mx-auto mt-3 rounded-lg py-3 text-white w-40" style="font-family: 'Fredoka', sans-serif;">lorem.</button>
-        </div>
+    <div class="overflow-hidden w-full bg-right-top lg:bg-top bg-fixed py-24" style="background-image: url(img/jason-goodman-6awfTPLGaCE-unsplash.jpg); box-shadow: inset 0px 0px 400px 110px rgba(0, 0, 0, 0.7)">
+      <div data-aos="fade-down" data-aos-duration="1800" class="flex flex-col text-center my-auto mx-auto">
+        <h2 class="text-3xl text-white font-bold" style="font-family: 'Fredoka', sans-serif">Gabung Banh!!</h2>
+        <p class="text text-white" style="font-family: 'Fredoka', sans-serif">Lorem ipsum dolor sit amet.</p>
+        <button class="hover:-translate-y-2 hover:shadow-2xl transition duration-500 hover:bg-green-600 bg-green-800 mx-auto mt-3 rounded-lg py-3 text-white w-40" style="font-family: 'Fredoka', sans-serif">lorem.</button>
+      </div>
     </div>
     <!-- parallax end -->
     <!-- orang -->
     <div class="container mx-auto w-full mt-32 overflow-hidden">
-        <div class="text-center px-8">
-            <h2 class="col-span-3 text-3xl mx-auto font-semibold text-slate-900" style="font-family: 'Montserrat', sans-serif;">Apa yang orang lain katakan?</h2>
-            <hr class="mt-4 border-t-4 rounded-lg border-green-800 md:mx-[300px] lg:mx-[400px] xl:mx-[540px]">
-            <p class="col-span-3 text-lg mt-4 text-slate-400 lg:mx-72 font-fredoka">Tanggapan orang lain terhadap adanya pahamdigital.com</p>
+      <div class="text-center px-8">
+        <h2 class="col-span-3 text-3xl mx-auto font-semibold text-slate-900" style="font-family: 'Montserrat', sans-serif">Apa yang orang lain katakan?</h2>
+        <hr class="mt-4 border-t-4 rounded-lg border-green-800 md:mx-[300px] lg:mx-[400px] xl:mx-[540px]" />
+        <p class="col-span-3 text-lg mt-4 text-slate-400 lg:mx-72 font-fredoka">Tanggapan orang lain terhadap adanya pahamdigital.com</p>
+      </div>
+      <div class="p-4 lg:p-0 container grid mt-5 lg:grid-cols-2 place-items-center lg:grid-rows-4 grid-cols-1 mx-auto">
+        <!-- cust 1 -->
+        <div data-aos="fade-right" data-aos-duration="1800">
+          <div class="hover:-translate-y-3 transition duration-500 hover:shadow-2xl flex items-center mx-auto px-5 py-3 border-b lg:border-none lg:translate-x-40">
+            <div class="rounded bg-cover w-32 h-20 bg-center bg-[url('img/customer1.jpg')]"></div>
+            <div class="ml-5 text-left font-comfortaa">
+              <h2 class="text-lg text-slate-700"><i>- Rosaline</i></h2>
+              <p class="text-sm text-slate-500">"Lorem ipsum dolor sit amet consectetur adipisicing elit?"</p>
+            </div>
+          </div>
         </div>
-        <div class="p-4 lg:p-0 container grid mt-5 lg:grid-cols-2 place-items-center lg:grid-rows-4 grid-cols-1 mx-auto">
-            <!-- cust 1 -->
-            <div data-aos="fade-right" data-aos-duration="1800">
-                <div class="hover:-translate-y-3 transition duration-500 hover:shadow-2xl flex items-center mx-auto px-5 py-3 border-b lg:border-none lg:translate-x-40">
-                    <div class="rounded bg-cover w-32 h-20 bg-center bg-[url('img/customer1.jpg')]"></div>
-                    <div class="ml-5 text-left font-comfortaa">
-                        <h2 class="text-lg text-slate-700"><i>- Rosaline</i></h2>
-                        <p class="text-sm text-slate-500">"Lorem ipsum dolor sit amet consectetur adipisicing elit?"</p>
-                    </div>
-                </div>
+        <!-- cust 2 -->
+        <div data-aos="fade-left" data-aos-duration="1800" data-aos-delay="300" class="lg:col-start-2 lg:row-start-2">
+          <div class="hover:-translate-y-3 transition duration-500 hover:shadow-2xl flex items-center mx-auto px-5 py-3 border-b lg:border-none lg:-translate-x-40">
+            <div class="mr-5 font-comfortaa text-right">
+              <h2 class="text-lg text-slate-700"><i>Edgar -</i></h2>
+              <p class="text-sm text-slate-500">"Lorem ipsum dolor sit amet consectetur adipisicing elit?"</p>
             </div>
-            <!-- cust 2 -->
-            <div data-aos="fade-left" data-aos-duration="1800" data-aos-delay="300" class="lg:col-start-2 lg:row-start-2">
-                <div class="hover:-translate-y-3 transition duration-500 hover:shadow-2xl flex items-center mx-auto px-5 py-3 border-b lg:border-none lg:-translate-x-40">
-                    <div class="mr-5 font-comfortaa text-right">
-                        <h2 class="text-lg text-slate-700"><i>Edgar -</i></h2>
-                        <p class="text-sm text-slate-500">"Lorem ipsum dolor sit amet consectetur adipisicing elit?"</p>
-                    </div>
-                    <div class="rounded bg-cover bg-center w-32 h-20 bg-[url('img/customer2.jpg')]"></div>
-                </div>
-            </div>
-            <!-- cust 3 -->
-            <div data-aos="fade-right" data-aos-duration="1800" data-aos-delay="600" class="lg:col-start-1 lg:row-start-3">
-                <div class="hover:-translate-y-3 transition duration-500 hover:shadow-2xl flex items-center mx-auto px-5 py-3 border-b lg:border-none lg:translate-x-40">
-                    <div class="rounded bg-cover w-32 h-20 bg-center bg-[url('img/customer3.jpg')]"></div>
-                    <div class="ml-5 text-left font-comfortaa">
-                        <h2 class="text-lg text-slate-700"><i>- Rose</i></h2>
-                        <p class="text-sm text-slate-500">"Lorem ipsum dolor sit amet consectetur adipisicing elit?"</p>
-                    </div>
-                </div>
-            </div>
-            <!-- cust 4 -->
-            <div data-aos="fade-left" data-aos-duration="1800" data-aos-delay="900" class="mb-10 lg:col-start-2 lg:row-start-4">
-                <div class="hover:-translate-y-3 transition duration-500 hover:shadow-2xl flex items-center mx-auto px-5 py-3 lg:-translate-x-40">
-                    <div class="mr-5 font-comfortaa text-right">
-                        <h2 class="text-lg text-slate-700"><i>Javier -</i></h2>
-                        <p class="text-sm text-slate-500">"Lorem ipsum dolor sit amet consectetur adipisicing elit?"</p>
-                    </div>
-                    <div class="rounded bg-cover bg-right w-32 h-20 bg-[url('img/customer4.jpg')]"></div>
-                </div>
-            </div>
+            <div class="rounded bg-cover bg-center w-32 h-20 bg-[url('img/customer2.jpg')]"></div>
+          </div>
         </div>
+        <!-- cust 3 -->
+        <div data-aos="fade-right" data-aos-duration="1800" data-aos-delay="600" class="lg:col-start-1 lg:row-start-3">
+          <div class="hover:-translate-y-3 transition duration-500 hover:shadow-2xl flex items-center mx-auto px-5 py-3 border-b lg:border-none lg:translate-x-40">
+            <div class="rounded bg-cover w-32 h-20 bg-center bg-[url('img/customer3.jpg')]"></div>
+            <div class="ml-5 text-left font-comfortaa">
+              <h2 class="text-lg text-slate-700"><i>- Rose</i></h2>
+              <p class="text-sm text-slate-500">"Lorem ipsum dolor sit amet consectetur adipisicing elit?"</p>
+            </div>
+          </div>
+        </div>
+        <!-- cust 4 -->
+        <div data-aos="fade-left" data-aos-duration="1800" data-aos-delay="900" class="mb-10 lg:col-start-2 lg:row-start-4">
+          <div class="hover:-translate-y-3 transition duration-500 hover:shadow-2xl flex items-center mx-auto px-5 py-3 lg:-translate-x-40">
+            <div class="mr-5 font-comfortaa text-right">
+              <h2 class="text-lg text-slate-700"><i>Javier -</i></h2>
+              <p class="text-sm text-slate-500">"Lorem ipsum dolor sit amet consectetur adipisicing elit?"</p>
+            </div>
+            <div class="rounded bg-cover bg-right w-32 h-20 bg-[url('img/customer4.jpg')]"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- orang end -->
     <!-- team -->
-    <div style="z-index: -1;" id="particles-js" class="h-[1000px] mt-32">
-        <div class="relative">
-            <div style="z-index: 1;" class="right-0 left-0 absolute mx-auto px-10 container w-full">
-                <div class="container">
-                    <div class="text-center px-8">
-                        <h2 class="col-span-3 text-3xl mx-auto font-semibold text-slate-900" style="font-family: 'Montserrat', sans-serif;">Team</h2>
-                        <hr class="mt-4 border-t-4 rounded-lg lg:mx-[500px] border-green-800">
-                        <p class="col-span-3 text-lg mt-4 text-slate-400 lg:mx-72 font-fredoka">Solidaritas, saling membantu untuk sukses bersama.</p>
-                    </div>
-                </div>
-                <div class="container gap-5 grid grid-cols-1 lg:grid-cols-4">
-                    <!-- card 1 -->
-                    <div class="lg:col-span-4 group  hover:shadow-2xl hover:scale-95 transition duration-500 bg-white lg:w-56 xl:w-72 w-60 h-96 shadow-lg rounded-lg p-0 mt-5 flex flex-col mx-auto overflow-hidden">
-                        <div class="lg:w-56 xl:w-72 w-60 h-80 overflow-hidden">
-                            <div class="transition group-hover:rotate-3 duration-500 group-hover:scale-125 lg:w-56 xl:w-72 w-60 h-80 bg-center bg-cover bg-[url('img/team1.jpg')]">
-                            </div>
-                            <ul class="pl-5" style="z-index: 1;">
-                                <li class="cursor-pointer duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                                    </svg>
-                                </li>
-                                <li class="cursor-pointer delay-150 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                                    </svg>
-                                </li>
-                                <li class="cursor-pointer delay-300 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                                    </svg>
-                                </li>
-                                <li class="cursor-pointer delay-500 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                                    </svg>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="p-5 border">
-                            <h2 class="text-2xl font-semibold font-fredoka">Jeremy</h2>
-                            <p class="font-comfortaa text-sm text-slate-500 mt-1">Pembina</p>
-                        </div>
-                    </div>
-                    <!-- card 2 -->
-                    <div class="group  hover:shadow-2xl hover:scale-95 transition duration-500 bg-white lg:w-56 xl:w-72 w-60 h-96 shadow-lg rounded-lg p-0 mt-5 flex flex-col mx-auto overflow-hidden">
-                        <div class="lg:w-56 xl:w-72 w-60 h-80 overflow-hidden">
-                            <div class="transition group-hover:rotate-3 duration-500 group-hover:scale-125 lg:w-56 xl:w-72 w-60 h-80 bg-center bg-cover bg-[url('img/team2.jpg')]">
-                            </div>
-                            <ul class="pl-5" style="z-index: 1;">
-                                <li class="cursor-pointer duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                                    </svg>
-                                </li>
-                                <li class="cursor-pointer delay-150 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                                    </svg>
-                                </li>
-                                <li class="cursor-pointer delay-300 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                                    </svg>
-                                </li>
-                                <li class="cursor-pointer delay-500 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                                    </svg>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="p-5 border">
-                            <h2 class="text-2xl font-semibold font-fredoka">Clara</h2>
-                            <p class="font-comfortaa text-sm text-slate-500 mt-1">Ketua</p>
-                        </div>
-                    </div>
-                    <!-- card 3 -->
-                    <div class="group  hover:shadow-2xl hover:scale-95 transition duration-500 bg-white lg:w-56 xl:w-72 w-60 h-96 shadow-lg rounded-lg p-0 mt-5 flex flex-col mx-auto overflow-hidden">
-                        <div class="lg:w-56 xl:w-72 w-60 h-80 overflow-hidden">
-                            <div class="transition group-hover:rotate-3 duration-500 group-hover:scale-125 lg:w-56 xl:w-72 w-60 h-80 bg-center bg-cover bg-[url('img/team3.jpg')]">
-                            </div>
-                            <ul class="pl-5" style="z-index: 1;">
-                                <li class="cursor-pointer duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                                    </svg>
-                                </li>
-                                <li class="cursor-pointer delay-150 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                                    </svg>
-                                </li>
-                                <li class="cursor-pointer delay-300 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                                    </svg>
-                                </li>
-                                <li class="cursor-pointer delay-500 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                                    </svg>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="p-5 border">
-                            <h2 class="text-2xl font-semibold font-fredoka">Bella</h2>
-                            <p class="font-comfortaa text-sm text-slate-500 mt-1">Member</p>
-                        </div>
-                    </div>
-                    <!-- card 4 -->
-                    <div class="group  hover:shadow-2xl hover:scale-95 transition duration-500 bg-white lg:w-56 xl:w-72 w-60 h-96 shadow-lg rounded-lg p-0 mt-5 flex flex-col mx-auto overflow-hidden">
-                        <div class="lg:w-56 xl:w-72 w-60 h-80 overflow-hidden">
-                            <div class="transition group-hover:rotate-3 duration-500 group-hover:scale-125 lg:w-56 xl:w-72 w-60 h-80 bg-center bg-cover bg-[url('img/team4.jpg')]">
-                            </div>
-                            <ul class="pl-5" style="z-index: 1;">
-                                <li class="cursor-pointer duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                                    </svg>
-                                </li>
-                                <li class="cursor-pointer delay-150 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                                    </svg>
-                                </li>
-                                <li class="cursor-pointer delay-300 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                                    </svg>
-                                </li>
-                                <li class="cursor-pointer delay-500 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                                    </svg>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="p-5 border">
-                            <h2 class="text-2xl font-semibold font-fredoka">Alok</h2>
-                            <p class="font-comfortaa text-sm text-slate-500 mt-1">Player ngep ngep</p>
-                        </div>
-                    </div>
-                    <!-- card 5 -->
-                    <div class="group  hover:shadow-2xl hover:scale-95 transition duration-500 bg-white lg:w-56 xl:w-72 w-60 h-96 shadow-lg rounded-lg p-0 mt-5 flex flex-col mx-auto overflow-hidden">
-                        <div class="lg:w-56 xl:w-72 w-60 h-80 overflow-hidden">
-                            <div class="transition group-hover:rotate-3 duration-500 group-hover:scale-125 lg:w-56 xl:w-72 w-60 h-80 bg-center bg-cover bg-[url('img/team5.jpg')]">
-                            </div>
-                            <ul class="pl-5" style="z-index: 1;">
-                                <li class="cursor-pointer duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                                    </svg>
-                                </li>
-                                <li class="cursor-pointer delay-150 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                                    </svg>
-                                </li>
-                                <li class="cursor-pointer delay-300 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                                    </svg>
-                                </li>
-                                <li class="cursor-pointer delay-500 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
-                                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                                    </svg>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="p-5 border">
-                            <h2 class="text-2xl font-semibold font-fredoka">Siuuuuuu</h2>
-                            <p class="font-comfortaa text-sm text-slate-500 mt-1">Member</p>
-                        </div>
-                    </div>
-                </div>
+    <div style="z-index: -1" id="particles-js" class="h-[1000px] mt-32">
+      <div class="relative">
+        <div style="z-index: 1" class="right-0 left-0 absolute mx-auto px-10 container w-full">
+          <div class="container">
+            <div class="text-center px-8">
+              <h2 class="col-span-3 text-3xl mx-auto font-semibold text-slate-900" style="font-family: 'Montserrat', sans-serif">Team</h2>
+              <hr class="mt-4 border-t-4 rounded-lg lg:mx-[500px] border-green-800" />
+              <p class="col-span-3 text-lg mt-4 text-slate-400 lg:mx-72 font-fredoka">Solidaritas, saling membantu untuk sukses bersama.</p>
             </div>
+          </div>
+          <div class="container gap-5 grid grid-cols-1 lg:grid-cols-4">
+            <!-- card 1 -->
+            <div class="lg:col-span-4 group hover:shadow-2xl hover:scale-95 transition duration-500 bg-white lg:w-56 xl:w-72 w-60 h-96 shadow-lg rounded-lg p-0 mt-5 flex flex-col mx-auto overflow-hidden">
+              <div class="lg:w-56 xl:w-72 w-60 h-80 overflow-hidden">
+                <div class="transition group-hover:rotate-3 duration-500 group-hover:scale-125 lg:w-56 xl:w-72 w-60 h-80 bg-center bg-cover bg-[url('img/team1.jpg')]"></div>
+                <ul class="pl-5" style="z-index: 1">
+                  <li class="cursor-pointer duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                      />
+                    </svg>
+                  </li>
+                  <li class="cursor-pointer delay-150 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                      <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                      />
+                    </svg>
+                  </li>
+                  <li class="cursor-pointer delay-300 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                      <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                      />
+                    </svg>
+                  </li>
+                  <li class="cursor-pointer delay-500 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                      />
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5 border">
+                <h2 class="text-2xl font-semibold font-fredoka">Jeremy</h2>
+                <p class="font-comfortaa text-sm text-slate-500 mt-1">Pembina</p>
+              </div>
+            </div>
+            <!-- card 2 -->
+            <div class="group hover:shadow-2xl hover:scale-95 transition duration-500 bg-white lg:w-56 xl:w-72 w-60 h-96 shadow-lg rounded-lg p-0 mt-5 flex flex-col mx-auto overflow-hidden">
+              <div class="lg:w-56 xl:w-72 w-60 h-80 overflow-hidden">
+                <div class="transition group-hover:rotate-3 duration-500 group-hover:scale-125 lg:w-56 xl:w-72 w-60 h-80 bg-center bg-cover bg-[url('img/team2.jpg')]"></div>
+                <ul class="pl-5" style="z-index: 1">
+                  <li class="cursor-pointer duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                      />
+                    </svg>
+                  </li>
+                  <li class="cursor-pointer delay-150 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                      <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                      />
+                    </svg>
+                  </li>
+                  <li class="cursor-pointer delay-300 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                      <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                      />
+                    </svg>
+                  </li>
+                  <li class="cursor-pointer delay-500 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                      />
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5 border">
+                <h2 class="text-2xl font-semibold font-fredoka">Clara</h2>
+                <p class="font-comfortaa text-sm text-slate-500 mt-1">Ketua</p>
+              </div>
+            </div>
+            <!-- card 3 -->
+            <div class="group hover:shadow-2xl hover:scale-95 transition duration-500 bg-white lg:w-56 xl:w-72 w-60 h-96 shadow-lg rounded-lg p-0 mt-5 flex flex-col mx-auto overflow-hidden">
+              <div class="lg:w-56 xl:w-72 w-60 h-80 overflow-hidden">
+                <div class="transition group-hover:rotate-3 duration-500 group-hover:scale-125 lg:w-56 xl:w-72 w-60 h-80 bg-center bg-cover bg-[url('img/team3.jpg')]"></div>
+                <ul class="pl-5" style="z-index: 1">
+                  <li class="cursor-pointer duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                      />
+                    </svg>
+                  </li>
+                  <li class="cursor-pointer delay-150 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                      <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                      />
+                    </svg>
+                  </li>
+                  <li class="cursor-pointer delay-300 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                      <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                      />
+                    </svg>
+                  </li>
+                  <li class="cursor-pointer delay-500 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                      />
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5 border">
+                <h2 class="text-2xl font-semibold font-fredoka">Bella</h2>
+                <p class="font-comfortaa text-sm text-slate-500 mt-1">Member</p>
+              </div>
+            </div>
+            <!-- card 4 -->
+            <div class="group hover:shadow-2xl hover:scale-95 transition duration-500 bg-white lg:w-56 xl:w-72 w-60 h-96 shadow-lg rounded-lg p-0 mt-5 flex flex-col mx-auto overflow-hidden">
+              <div class="lg:w-56 xl:w-72 w-60 h-80 overflow-hidden">
+                <div class="transition group-hover:rotate-3 duration-500 group-hover:scale-125 lg:w-56 xl:w-72 w-60 h-80 bg-center bg-cover bg-[url('img/team4.jpg')]"></div>
+                <ul class="pl-5" style="z-index: 1">
+                  <li class="cursor-pointer duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                      />
+                    </svg>
+                  </li>
+                  <li class="cursor-pointer delay-150 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                      <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                      />
+                    </svg>
+                  </li>
+                  <li class="cursor-pointer delay-300 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                      <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                      />
+                    </svg>
+                  </li>
+                  <li class="cursor-pointer delay-500 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                      />
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5 border">
+                <h2 class="text-2xl font-semibold font-fredoka">Alok</h2>
+                <p class="font-comfortaa text-sm text-slate-500 mt-1">Player ngep ngep</p>
+              </div>
+            </div>
+            <!-- card 5 -->
+            <div class="group hover:shadow-2xl hover:scale-95 transition duration-500 bg-white lg:w-56 xl:w-72 w-60 h-96 shadow-lg rounded-lg p-0 mt-5 flex flex-col mx-auto overflow-hidden">
+              <div class="lg:w-56 xl:w-72 w-60 h-80 overflow-hidden">
+                <div class="transition group-hover:rotate-3 duration-500 group-hover:scale-125 lg:w-56 xl:w-72 w-60 h-80 bg-center bg-cover bg-[url('img/team5.jpg')]"></div>
+                <ul class="pl-5" style="z-index: 1">
+                  <li class="cursor-pointer duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                      />
+                    </svg>
+                  </li>
+                  <li class="cursor-pointer delay-150 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                      <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                      />
+                    </svg>
+                  </li>
+                  <li class="cursor-pointer delay-300 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                      <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                      />
+                    </svg>
+                  </li>
+                  <li class="cursor-pointer delay-500 duration-300 p-2 transition group-hover:-translate-y-14 md:group-hover:-translate-y-16 bg-slate-900 rounded inline-block">
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                      />
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5 border">
+                <h2 class="text-2xl font-semibold font-fredoka">Siuuuuuu</h2>
+                <p class="font-comfortaa text-sm text-slate-500 mt-1">Member</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- team end -->
     <!-- contact -->
     <div class="container mx-auto w-full lg:mt-72 mt-[1300px] overflow-hidden">
-        <div class="text-center px-8">
-            <h2 class="col-span-3 text-3xl mx-auto font-semibold text-slate-900" style="font-family: 'Montserrat', sans-serif;">Contact us</h2>
-            <hr class="mt-4 border-t-4 rounded-lg border-green-800 md:mx-[300px] lg:mx-[400px] xl:mx-[540px]">
-            <p class="col-span-3 text-lg mt-4 text-slate-400 lg:mx-72 font-fredoka">Temukan kita di?</p>
+      <div class="text-center px-8">
+        <h2 class="col-span-3 text-3xl mx-auto font-semibold text-slate-900" style="font-family: 'Montserrat', sans-serif">Contact us</h2>
+        <hr class="mt-4 border-t-4 rounded-lg border-green-800 md:mx-[300px] lg:mx-[400px] xl:mx-[540px]" />
+        <p class="col-span-3 text-lg mt-4 text-slate-400 lg:mx-72 font-fredoka">Temukan kita di?</p>
+      </div>
+      <div class="container flex lg:flex-row flex-col justify-center items-center w-full mx-auto mt-12">
+        <div class="border rounded mx-auto p-3" data-aos="fade-right" data-aos-duration="1800">
+          <iframe
+            class="hidden md:block lg:hidden"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.081428297467!2d108.38553331461742!3d-7.344752974290398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f5e53aaaaaaab%3A0xaefa4c79528b26b2!2sSMK%20Miftahussalam!5e0!3m2!1sid!2sid!4v1647080465523!5m2!1sid!2sid"
+            width="400"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+          <iframe
+            class="block md:hidden"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.081428297467!2d108.38553331461742!3d-7.344752974290398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f5e53aaaaaaab%3A0xaefa4c79528b26b2!2sSMK%20Miftahussalam!5e0!3m2!1sid!2sid!4v1647082800574!5m2!1sid!2sid"
+            width="200"
+            height="200"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+          <iframe
+            class="hidden lg:block"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.081428297467!2d108.38553331461742!3d-7.344752974290398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f5e53aaaaaaab%3A0xaefa4c79528b26b2!2sSMK%20Miftahussalam!5e0!3m2!1sid!2sid!4v1647080465523!5m2!1sid!2sid"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
         </div>
-        <div class="container flex lg:flex-row flex-col justify-center items-center w-full mx-auto mt-12">
-            <div class="border rounded mx-auto p-3" data-aos="fade-right" data-aos-duration="1800">
-                <iframe class="hidden md:block lg:hidden" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.081428297467!2d108.38553331461742!3d-7.344752974290398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f5e53aaaaaaab%3A0xaefa4c79528b26b2!2sSMK%20Miftahussalam!5e0!3m2!1sid!2sid!4v1647080465523!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                <iframe class="block md:hidden" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.081428297467!2d108.38553331461742!3d-7.344752974290398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f5e53aaaaaaab%3A0xaefa4c79528b26b2!2sSMK%20Miftahussalam!5e0!3m2!1sid!2sid!4v1647082800574!5m2!1sid!2sid" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                <iframe class="hidden lg:block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.081428297467!2d108.38553331461742!3d-7.344752974290398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f5e53aaaaaaab%3A0xaefa4c79528b26b2!2sSMK%20Miftahussalam!5e0!3m2!1sid!2sid!4v1647080465523!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="mt-12 px-16 mb-12 ml-0 xl:-translate-x-20">
+          <form data-aos="fade-left" data-aos-duration="1800" class="w-full max-w-lg">
+            <div class="flex -mx-3">
+              <div class="w-full px-3 mb-3 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name"> Your Name </label>
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" />
+              </div>
             </div>
-            <div class="mt-12 px-16 mb-12 ml-0 xl:-translate-x-20" >
-                <form data-aos="fade-left" data-aos-duration="1800" class="w-full max-w-lg">
-                    <div class="flex -mx-3">
-                    <div class="w-full px-3 mb-3 md:mb-0">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                            Your Name
-                        </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text">
-                    </div>
-                    </div>
-                    <div class="flex flex-wrap -mx-3">
-                    <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                            E-mail
-                        </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email">
-                    </div>
-                    </div>
-                    <div class="flex flex-wrap -mx-3">
-                    <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                            Message
-                        </label>
-                        <textarea class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message"></textarea>
-                    </div>
-                    </div>
-                    <div class="md:flex md:items-center">
-                    <div class="md:w-1/3">
-                        <button class="shadow bg-green-800 hover:bg-green-900 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
-                            Send
-                        </button>
-                    </div>
-                    <div class="md:w-2/3"></div>
-                    </div>
-                </form>
+            <div class="flex flex-wrap -mx-3">
+              <div class="w-full px-3">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password"> E-mail </label>
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email" />
+              </div>
             </div>
+            <div class="flex flex-wrap -mx-3">
+              <div class="w-full px-3">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password"> Message </label>
+                <textarea
+                  class="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
+                  id="message"
+                ></textarea>
+              </div>
+            </div>
+            <div class="md:flex md:items-center">
+              <div class="md:w-1/3">
+                <button class="shadow bg-green-800 hover:bg-green-900 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">Send</button>
+              </div>
+              <div class="md:w-2/3"></div>
+            </div>
+          </form>
         </div>
+      </div>
     </div>
     <!-- contact end -->
     <!-- footer -->
     <footer class="mb-0 w-full text-center bg-slate-700 pt-12 pb-6">
-        <p class="text-center text-white">@ 2022 Pahamdigital.com</p>
+      <p class="text-center text-white">@ 2022 Pahamdigital.com</p>
     </footer>
     <!-- footer end -->
 
     <!-- particle.js -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-        particlesJS.load('particles-js', 'particlesjs-config.json', function() {
-        console.log('callback - particles.js config loaded');
-        });
+      /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+      particlesJS.load("particles-js", "particlesjs-config.json", function () {
+        console.log("callback - particles.js config loaded");
+      });
     </script>
     <!-- aos -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init();
     </script>
 
     <script>
-        var x = document.getElementById("myAudio"); 
-    
-        function playAudio() { 
-            x.play(); 
-        } 
-    
-        function pauseAudio() { 
-            x.pause(); 
-        }
-    </script> 
+      var x = document.getElementById("myAudio");
 
-    <script>
-        const btnac1 = document.querySelector('.btn-ac-1');
-        const ac1 = document.querySelector('.ac-1');
-        const ac1top = document.querySelector('.ac-1-top');
-        const ac1arrow = document.querySelector('.ac-1-arrow');
-        const btnac2 = document.querySelector('.btn-ac-2');
-        const ac2 = document.querySelector('.ac-2');
-        const ac2top = document.querySelector('.ac-2-top');
-        const ac2arrow = document.querySelector('.ac-2-arrow');
-        const btnac3 = document.querySelector('.btn-ac-3');
-        const ac3 = document.querySelector('.ac-3');
-        const ac3top = document.querySelector('.ac-3-top');
-        const ac3arrow = document.querySelector('.ac-3-arrow');
-        const btn = document.querySelector('.mobile-menu-button');
-        const menu = document.querySelector('.mobile-menu');
+      function playAudio() {
+        x.play();
+      }
 
-        btnac1.addEventListener('click', () => {
-            ac1.classList.toggle("hidden");
-            ac1top.classList.toggle("text-green-800");
-            ac1arrow.classList.toggle("rotate-180");
-        })
-        btnac2.addEventListener('click', () => {
-            ac2.classList.toggle("hidden");
-            ac2top.classList.toggle("text-green-800");
-            ac2arrow.classList.toggle("rotate-180");
-        })
-        btnac3.addEventListener('click', () => {
-            ac3.classList.toggle("hidden");
-            ac3top.classList.toggle("text-green-800");
-            ac3arrow.classList.toggle("rotate-180");
-        })
-        btn.addEventListener('click', () => {
-            menu.classList.toggle("hidden");
-        })
+      function pauseAudio() {
+        x.pause();
+      }
     </script>
 
     <script>
-        const chechbox = document.querySelector('#toggle');
-        const html = document.querySelector('html');
+      const btnac1 = document.querySelector(".btn-ac-1");
+      const ac1 = document.querySelector(".ac-1");
+      const ac1top = document.querySelector(".ac-1-top");
+      const ac1arrow = document.querySelector(".ac-1-arrow");
+      const btnac2 = document.querySelector(".btn-ac-2");
+      const ac2 = document.querySelector(".ac-2");
+      const ac2top = document.querySelector(".ac-2-top");
+      const ac2arrow = document.querySelector(".ac-2-arrow");
+      const btnac3 = document.querySelector(".btn-ac-3");
+      const ac3 = document.querySelector(".ac-3");
+      const ac3top = document.querySelector(".ac-3-top");
+      const ac3arrow = document.querySelector(".ac-3-arrow");
+      const btn = document.querySelector(".mobile-menu-button");
+      const menu = document.querySelector(".mobile-menu");
 
-        chechbox.addEventListener('click', function()
-        {
-            chechbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
-        });
+      btnac1.addEventListener("click", () => {
+        ac1.classList.toggle("hidden");
+        ac1top.classList.toggle("text-green-800");
+        ac1arrow.classList.toggle("rotate-180");
+      });
+      btnac2.addEventListener("click", () => {
+        ac2.classList.toggle("hidden");
+        ac2top.classList.toggle("text-green-800");
+        ac2arrow.classList.toggle("rotate-180");
+      });
+      btnac3.addEventListener("click", () => {
+        ac3.classList.toggle("hidden");
+        ac3top.classList.toggle("text-green-800");
+        ac3arrow.classList.toggle("rotate-180");
+      });
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
     </script>
-</body>
+
+    <script>
+      const chechbox = document.querySelector("#toggle");
+      const html = document.querySelector("html");
+
+      chechbox.addEventListener("click", function () {
+        chechbox.checked ? html.classList.add("dark") : html.classList.remove("dark");
+      });
+    </script>
+  </body>
 </html>
